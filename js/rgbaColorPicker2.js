@@ -1,5 +1,10 @@
-! function (e) {
-	e.fn.rgbaColorPicker = function (a, c, b) {
+/* Menucool rgba Color Picker v2018.9.23. menucool.com/rgba-color-picker */
+var MenuCoolRgbaColorPickerOptions = {
+		initOnPageLoad: true
+	},
+	rgbaColorPicker = function (E) {
+		"use strict";
+		var e = function (a, c, b) {
 				if (a.addEventListener) a.addEventListener(c, b, false);
 				else a.attachEvent && a.attachEvent("on" + c, function (c) {
 					c.preventDefault = function () {
@@ -315,4 +320,23 @@
 		var y = function () {
 			if (!a) a = new B
 		};
-}(jQuery);
+		E.initOnPageLoad && e(window, "load", y);
+		return {
+			refresh: function () {
+				for (var b = 0, c = a.R.length; b < c; b++) a.R[b].onchange()
+			},
+			setStyle: function (a) {
+				a[b][f] = a.value;
+				a[b].color = r(a.value)
+			},
+			hexAlphaToRgba: x,
+			rgbToHex: l,
+			rgbaToHex: w,
+			getContrastColor: r,
+			getParsedColors: s,
+			close: function () {
+				a.r[b][h] = "none"
+			},
+			init: y
+		}
+	}(MenuCoolRgbaColorPickerOptions)
